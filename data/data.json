@@ -1,0 +1,24 @@
+{
+  "players": [
+    {
+      "id": 1,
+      "name": "LeBron James",
+      "img": "/public/images/Lebron.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Stephen Curry",
+      "img": "/public/images/Stephen-curry.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Kevin Durant",
+      "img": "/public/images/Kevin-durant.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Joel Embiid",
+      "img": "/public/images/Joel-embiid.jpeg"
+    }
+  ]
+}
