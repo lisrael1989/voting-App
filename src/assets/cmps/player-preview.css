@@ -1,0 +1,51 @@
+.player-preview {
+  color: rgb(121, 123, 216);
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-preview h4 {
+  text-transform: capitalize;
+  color: black;
+}
+
+.sale-section {
+  font-size: 1.5em;
+  position: relative;
+  display: inline-block;
+  background: red;
+  color: white;
+
+  text-align: center;
+  vertical-align: middle;
+
+  transform: rotate(-20deg);
+  animation: beat 1s ease infinite alternate;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    background: inherit;
+    height: inherit;
+    width: inherit;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: rotate(30deg);
+  }
+  &:after {
+    transform: rotate(60deg);
+  }
+}
+
+@keyframes beat {
+  from {
+    transform: rotate(-20deg) scale(1);
+  }
+  to {
+    transform: rotate(-20deg) scale(1.1);
+  }
+}

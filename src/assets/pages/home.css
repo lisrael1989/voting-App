@@ -1,0 +1,41 @@
+.home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.home-img {
+  transform: scale();
+  margin-top: 50px;
+  border: none;
+  gap: 30px;
+  padding: 10px 30px;
+  border-radius: 50%;
+  max-width: 500px;
+  border-bottom: 50px black;
+  background-color: transparent;
+  animation: bounce;
+  animation-duration: 2s;
+  box-shadow: 5px 5px 10px 5px rgb(190, 187, 187);
+}
+
+.home-title {
+  top: 0;
+
+  font-size: 3em;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.home-title span {
+  font-size: 2em;
+  color: rebeccapurple;
+}
+
+.sub-title-home {
+  font-size: 2em;
+}
