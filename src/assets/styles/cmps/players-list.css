@@ -2,7 +2,7 @@
   padding: 15px 0 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   gap: 15px;
 }
 
@@ -12,7 +12,8 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--clr1bg-light);
+  background-color: var(--mainBlue);
+  color: var(--mainWhite);
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.238);
 }

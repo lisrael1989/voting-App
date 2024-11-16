@@ -1,4 +1,8 @@
 :root {
+  --mainBlue: #17408b;
+  --mainRed: #c9082a;
+  --mainWhite: #fff;
+
   --clr1: rgb(96, 107, 91);
   --clr2: rgb(120, 99, 110);
 
