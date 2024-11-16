@@ -30,7 +30,21 @@
   right: 0;
 }
 
-button {
-  background-color: var(--gray3);
+.vote-btn {
+  background-color: var(--mainRed);
+  border: none;
   color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.vote-btn:hover {
+  background-color: var(--mainWhite);
+  border: none;
+  color: var(--mainRed);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
 }

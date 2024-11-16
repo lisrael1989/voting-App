@@ -11,6 +11,26 @@
   text-transform: capitalize;
   color: black;
 }
+.player-preview img {
+  max-width: 100%;
+  position: relative;
+}
+
+.player-preview p {
+  position: absolute;
+  top: 4.5rem;
+  right: 15px;
+  z-index: 10;
+  font-size: 1rem;
+  color: var(--mainWhite);
+  background-color: var(--mainRed);
+  padding: 10px 15px;
+}
+
+.player-preview p span {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 
 .sale-section {
   font-size: 1.5em;

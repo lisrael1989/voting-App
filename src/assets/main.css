@@ -6,13 +6,10 @@
 @import './styles//base/base.css';
 @import './styles/base/helpers.css';
 @import './styles/base/layout.css';
-@import './styles/base/forms.css';
 
 /* Pages */
 @import './styles/pages/home.css';
 /* @import './styles/pages/about.css'; */
-
-/* @import './styles/pages/players.css'; */
 
 /* Components */
 @import './styles/cmps/app-header.css';
