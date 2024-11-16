@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './components/AppHeader.jsx';
 import { HomePage } from './components/views/HomePage.jsx';
-import { PlayersIndex } from './components/views/PlayersPage.jsx';
+import { PlayersIndex } from './components/views/PlayersIndex.jsx';
 import './assets/main.css';
 
 function App() {
