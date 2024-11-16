@@ -12,7 +12,7 @@ export function HomePage() {
         </h2>
       </div>
       <div>
-        <Link to="/book">
+        <Link to="/players">
           <img
             className="home-img animate__animated animate__bounce"
             src="/public/images/vote3.png"
