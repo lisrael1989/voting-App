@@ -1,63 +1,23 @@
-// import { Routes, Route, useNavigate } from 'react-router-dom';
-// import { AppHeader } from './components/AppHeader.jsx';
-// import { HomePage } from './components/views/HomePage.jsx';
-// import { PlayersIndex } from './components/views/PlayersIndex.jsx';
-// import { LoginPage } from './components/LogainPage.jsx';
-// import './assets/main.css';
-// import { useState } from 'react';
-
-// function App() {
-//   const [isLoggedIn, setIsLoggedIn] = useState(false);
-//   const navigate = useNavigate();
-
-//   const handleLogin = (user) => {
-//     setIsLoggedIn(true);
-//     navigate('/players');
-//   };
-//   return (
-//     <>
-//       <AppHeader />
-//       <section className="app main-layout">
-//         <Routes>
-//           <Route path="/" element={<HomePage />} />
-//           <Route
-//             path="/players"
-//             element={
-//               isLoggedIn ? (
-//                 <PlayersIndex />
-//               ) : (
-//                 <LoginPage onLogin={handleLogin} />
-//               )
-//             }
-//           />{' '}
-//         </Routes>
-//       </section>
-//     </>
-//   );
-// }
-
-// export default App;
-
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { AppHeader } from './components/AppHeader.jsx';
 import { HomePage } from './components/views/HomePage.jsx';
 import { PlayersIndex } from './components/views/PlayersIndex.jsx';
-import { LoginPage } from './components/LogainPage.jsx';
+import { LoginPage } from './components/LoginPage.jsx';
 import './assets/main.css';
 
 function App() {
-  const [user, setUser] = useState(null); // Track logged-in user
+  const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
   const handleLogin = (loggedInUser) => {
-    setUser(loggedInUser); // Set logged-in user
-    navigate('/players'); // Redirect to players page upon login
+    setUser(loggedInUser);
+    navigate('/players');
   };
 
   const handleLogout = () => {
-    setUser(null); // Clear user state
-    navigate('/'); // Redirect to HomePage
+    setUser(null);
+    navigate('/');
   };
 
   return (

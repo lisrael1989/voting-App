@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import UsersData from '../..//data/users.json';
+import UsersData from '../../data/users.json';
 
 export function LoginPage({ onLogin }) {
   const [email, setEmail] = useState('');
