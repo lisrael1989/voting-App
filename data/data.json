@@ -3,22 +3,26 @@
     {
       "id": 1,
       "name": "LeBron James",
-      "img": "/public/images/Lebron.jpeg"
+      "img": "/images/Lebron.jpeg",
+      "vote": 0
     },
     {
       "id": 2,
       "name": "Stephen Curry",
-      "img": "/public/images/Stephen-curry.jpeg"
+      "img": "/images/Stephen-curry.jpeg",
+      "vote": 0
     },
     {
       "id": 3,
       "name": "Kevin Durant",
-      "img": "/public/images/Kevin-durant.jpeg"
+      "img": "/images/Kevin-durant.jpeg",
+      "vote": 0
     },
     {
       "id": 4,
       "name": "Joel Embiid",
-      "img": "/public/images/Joel-embiid.jpeg"
+      "img": "/images/Joel-embiid.jpeg",
+      "vote": 0
     }
   ]
 }
