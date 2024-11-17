@@ -1,15 +1,51 @@
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-export function AppHeader() {
+export function AppHeader({ user, onLogout }) {
   return (
-    <header className="app-header full">
-      <Link to="/" className="logo">
-        Voting NBA Players App
-      </Link>
+    <header className="app-header">
+      <NavLink to="/">
+        <img className="logo" src="/logo.png" alt="logo" />
+      </NavLink>
 
-      <nav className="app-nav">
-        <NavLink to="/">Home</NavLink> |<NavLink to="/about">About</NavLink> |
-        <NavLink to="/players">Players</NavLink>
+      <nav>
+        <ul>
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? 'active-link' : '')}
+            >
+              Home
+            </NavLink>{' '}
+          </li>
+          {user ? (
+            <>
+              <li>
+                <NavLink
+                  to="/players"
+                  className={({ isActive }) => (isActive ? 'active-link' : '')}
+                >
+                  Players
+                </NavLink>{' '}
+              </li>
+              <li className="user-info">
+                <p>Hello, {user.name}</p>
+                <button className="logout-btn" onClick={onLogout}>
+                  Logout
+                </button>
+              </li>
+            </>
+          ) : (
+            <li>
+              {' '}
+              <NavLink
+                to="/players"
+                className={({ isActive }) => (isActive ? 'active-link' : '')}
+              >
+                Login
+              </NavLink>{' '}
+            </li>
+          )}
+        </ul>
       </nav>
     </header>
   );
