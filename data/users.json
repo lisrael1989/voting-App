@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "password": "myWord456",
+      "isAdmin": true
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "password": "mypassword456",
+      "isAdmin": false
+    },
+    {
+      "id": 3,
+      "name": "Michael Brown",
+      "email": "michael.brown@example.com",
+      "password": "securepass789",
+      "isAdmin": false
+    },
+    {
+      "id": 4,
+      "name": "Sarah Johnson",
+      "email": "sarah.johnson@example.com",
+      "password": "adminpass123",
+      "isAdmin": true
+    }
+  ]
+}

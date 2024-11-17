@@ -5,7 +5,9 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
-  { ignores: ['dist'] },
+  {
+    ignores: ['dist'], // Ignore dist folder
+  },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -28,12 +30,24 @@ export default [
       ...react.configs.recommended.rules,
       ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
+
+      // React-specific rules
       'react/jsx-no-target-blank': 'off',
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
       ],
-      'react/prop-types': 'off', // Disable the react/prop-types rule
+      'react/prop-types': 'off', // Disable prop-types rule
+
+      // Suppress warnings for unused variables (customize as needed)
+      'no-unused-vars': [
+        'warn',
+        {
+          vars: 'all', // Warn for all variables
+          args: 'after-used', // Warn only if arguments are unused
+          ignoreRestSiblings: true, // Ignore rest siblings (e.g., { ...rest })
+        },
+      ],
     },
   },
 ];
