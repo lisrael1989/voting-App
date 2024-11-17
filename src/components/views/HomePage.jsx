@@ -15,7 +15,7 @@ export function HomePage() {
         <Link to="/players">
           <img
             className="home-img animate__animated animate__bounce"
-            src="public/hero.png"
+            src="/public/hero.png"
           ></img>
         </Link>
       </div>
