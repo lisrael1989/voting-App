@@ -1,0 +1,87 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Login Page Container */
+.login-page {
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Form Styling */
+.login-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-page label {
+  font-weight: bold;
+  text-align: left;
+}
+
+.login-page h2 {
+  color: var(--mainRed);
+}
+
+.login-page input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-page button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: var(--mainBlue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-page button:hover {
+  background-color: var(--mainRed);
+}
+
+.login-page .toggle-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+  padding: 3px 5px;
+  margin-top: 20px;
+}
+
+.login-page .toggle-btn:hover {
+  color: var(--mainWhite);
+}
+
+/* Error Message */
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.success {
+  position: absolute;
+  color: green;
+  font-size: 1rem;
+  bottom: 0;
+  z-index: 10000;
+}
