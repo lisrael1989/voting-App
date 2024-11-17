@@ -14,11 +14,11 @@ export function PlayerPreview({
         <img className="player-img" src={player.img} alt={player.name} />
       </article>
       <button
-        className={`vote-btn ${isVotedFor ? 'voted' : ''}`}
+        className={`vote-btn ${isVotedFor ? 'Change Vote' : ''}`}
         onClick={() => onVote(player.id)}
         disabled={isVotingDisabled}
       >
-        {isVotedFor ? 'Voted' : 'Vote'}
+        {isVotedFor ? 'Change Vote' : 'Vote'}
       </button>
     </>
   );
