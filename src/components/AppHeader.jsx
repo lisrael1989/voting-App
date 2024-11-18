@@ -35,7 +35,7 @@ export function AppHeader({ user, onLogout }) {
               </li>
             </>
           ) : (
-            <li>
+            <li className="login-nav">
               {' '}
               <NavLink
                 to="/players"

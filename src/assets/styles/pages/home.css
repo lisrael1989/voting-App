@@ -14,7 +14,7 @@
   border: none;
   gap: 30px;
   border-radius: 5rem;
-  max-width: 700px;
+  max-width: 43.75rem;
   border-bottom: 50px black;
   background-color: transparent;
   animation: forwards;
@@ -24,7 +24,6 @@
 
 .home-title {
   top: 0;
-
   font-size: 3em;
   border-radius: 5px;
   text-align: center;
@@ -50,4 +49,30 @@
   background-color: var(--mainBlue);
   padding: 5px 10px;
   border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 750px) {
+  .home-img {
+    max-width: 550px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home-img {
+    max-width: 400px;
+  }
+
+  .home-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .home-img {
+    max-width: 300px;
+  }
+
+  .home-title {
+    font-size: 1.5rem;
+  }
 }

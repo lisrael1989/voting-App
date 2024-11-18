@@ -81,3 +81,22 @@
   border-radius: 5px;
   font-size: 14px;
 }
+
+@media screen and (max-width: 700px) {
+  .app-header {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .app-header nav {
+    margin-top: 10px;
+  }
+
+  .app-header nav ul {
+    flex-wrap: wrap;
+    max-width: 300px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
