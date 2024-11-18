@@ -1,0 +1,20 @@
+.users-votes-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.users-votes-table th,
+.users-votes-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.users-votes-table th {
+  background-color: #f4f4f4;
+}
+
+.users-votes-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

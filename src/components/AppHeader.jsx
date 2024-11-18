@@ -15,7 +15,7 @@ export function AppHeader({ user, onLogout }) {
               className={({ isActive }) => (isActive ? 'active-link' : '')}
             >
               Home
-            </NavLink>{' '}
+            </NavLink>
           </li>
           {user ? (
             <>
@@ -25,8 +25,20 @@ export function AppHeader({ user, onLogout }) {
                   className={({ isActive }) => (isActive ? 'active-link' : '')}
                 >
                   Players
-                </NavLink>{' '}
+                </NavLink>
               </li>
+              {user.isAdmin && (
+                <li>
+                  <NavLink
+                    to="/admin"
+                    className={({ isActive }) =>
+                      isActive ? 'active-link' : ''
+                    }
+                  >
+                    Dashboard
+                  </NavLink>
+                </li>
+              )}
               <li className="user-info">
                 <p>Hello, {user.name}</p>
                 <button className="logout-btn" onClick={onLogout}>
@@ -36,13 +48,12 @@ export function AppHeader({ user, onLogout }) {
             </>
           ) : (
             <li className="login-nav">
-              {' '}
               <NavLink
                 to="/players"
                 className={({ isActive }) => (isActive ? 'active-link' : '')}
               >
                 Login
-              </NavLink>{' '}
+              </NavLink>
             </li>
           )}
         </ul>

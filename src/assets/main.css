@@ -9,13 +9,11 @@
 
 /* Pages */
 @import './styles/pages/home.css';
-/* @import './styles/pages/about.css'; */
+@import './styles/pages/admin.css';
 
 /* Components */
 @import './styles/cmps/app-header.css';
 @import './styles/cmps/players-list.css';
 @import './styles/cmps/player-preview.css';
 @import './styles/cmps/login-form.css';
-/* @import './styles/cmps/player-filter.css';
-@import './styles/cmps/player-deatils.css'; */
 @import './styles/cmps/user-msg.css';

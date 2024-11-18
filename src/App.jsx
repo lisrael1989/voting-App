@@ -5,10 +5,12 @@ import { HomePage } from './components/views/HomePage.jsx';
 import { PlayersIndex } from './components/views/PlayersIndex.jsx';
 import { LoginPage } from './components/LoginPage.jsx';
 import usersData from '../public/data/users.json';
+import { Admin } from './components/views/Admin.jsx';
 import './assets/main.css';
 
 function App() {
   const [user, setUser] = useState(null);
+  const [users, setUsers] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -16,6 +18,7 @@ function App() {
     if (storedUsers.length === 0) {
       localStorage.setItem('users', JSON.stringify(usersData.users));
     }
+    setUsers(storedUsers);
 
     const storedUser = JSON.parse(localStorage.getItem('user'));
     if (storedUser) setUser(storedUser);
@@ -24,7 +27,7 @@ function App() {
   const handleLogin = (loggedInUser) => {
     setUser(loggedInUser);
     localStorage.setItem('user', JSON.stringify(loggedInUser));
-    navigate('/players');
+    navigate(loggedInUser.isAdmin ? '/admin' : '/players');
   };
 
   const handleLogout = () => {
@@ -44,6 +47,16 @@ function App() {
             element={
               user ? (
                 <PlayersIndex user={user} />
+              ) : (
+                <LoginPage onLogin={handleLogin} />
+              )
+            }
+          />
+          <Route
+            path="/admin"
+            element={
+              user?.isAdmin ? (
+                <Admin users={users} />
               ) : (
                 <LoginPage onLogin={handleLogin} />
               )
