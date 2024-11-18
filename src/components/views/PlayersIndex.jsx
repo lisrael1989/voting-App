@@ -14,7 +14,7 @@ export function PlayersIndex({ user }) {
         setPlayers(storedPlayers);
       } else {
         try {
-          const response = await fetch('/data/data.json');
+          const response = await fetch('../../../data/data.json');
           const data = await response.json();
           const playersWithVotes = data.players.map((player) => ({
             ...player,
