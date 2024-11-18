@@ -10,7 +10,6 @@ html {
 body {
   margin: 0;
   color: var(--gray3);
-  /* font-family: 'Edu VIC WA NT Beginner', cursive, sans-serif; */
   font-family: lato, sans-serif;
 }
 
@@ -21,18 +20,15 @@ h4,
 h5,
 h6 {
   margin: 0.2em 0 0.5em;
-  /* font-family: 'Edu VIC WA NT Beginner', cursive, sans-serif; */
   font-family: lato, sans-serif;
 }
 
 p {
   margin: 0 0 1em;
-  /* font-family: 'Edu VIC WA NT Beginner', cursive, sans-serif; */
   font-family: lato, sans-serif;
 }
 
 a {
-  /* font-family: 'Edu VIC WA NT Beginner', cursive, sans-serif; */
   font-family: lato, sans-serif;
 
   text-decoration: none;
