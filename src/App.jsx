@@ -4,7 +4,7 @@ import { AppHeader } from './components/AppHeader.jsx';
 import { HomePage } from './components/views/HomePage.jsx';
 import { PlayersIndex } from './components/views/PlayersIndex.jsx';
 import { LoginPage } from './components/LoginPage.jsx';
-import usersData from '../data/users.json';
+import usersData from '../public/data/users.json';
 import './assets/main.css';
 
 function App() {
