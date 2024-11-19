@@ -2,33 +2,46 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export function LoginPage({ onLogin }) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [name, setName] = useState('');
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+    name: '',
+  });
   const [error, setError] = useState('');
-  const [isSignUp, setIsSignUp] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
+  const [isSignUp, setIsSignUp] = useState(false);
   const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
 
     if (isSignUp) {
-      const userExists = storedUsers.find((u) => u.email === email);
+      const userExists = storedUsers.find((u) => u.email === formData.email);
       if (userExists) {
         setError('User already exists. Please log in.');
         return;
       }
 
-      const newUser = { id: Date.now(), name, email, password, isAdmin: false };
+      const newUser = {
+        id: Date.now(),
+        name: formData.name,
+        email: formData.email,
+        password: formData.password,
+        isAdmin: false,
+      };
       const updatedUsers = [...storedUsers, newUser];
       localStorage.setItem('users', JSON.stringify(updatedUsers));
       onLogin(newUser);
       setSuccessMessage('Sign-up successful! You are now logged in.');
     } else {
       const user = storedUsers.find(
-        (u) => u.email === email && u.password === password
+        (u) => u.email === formData.email && u.password === formData.password
       );
       if (user) {
         onLogin(user);
@@ -55,8 +68,9 @@ export function LoginPage({ onLogin }) {
             <label>Name:</label>
             <input
               type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
               required
             />
           </div>
@@ -65,8 +79,9 @@ export function LoginPage({ onLogin }) {
           <label>Email:</label>
           <input
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
             required
           />
         </div>
@@ -74,8 +89,9 @@ export function LoginPage({ onLogin }) {
           <label>Password:</label>
           <input
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
             required
           />
         </div>
